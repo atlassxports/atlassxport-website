@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — ATLASSXPORT</title>
+  <meta name="description" content="Looking for fresh produce from Morocco? Get in touch with ATLASSXPORT.">
+  <meta property="og:title" content="Contact — ATLASSXPORT">
+  <meta property="og:description" content="Looking for fresh produce from Morocco? Get in touch with ATLASSXPORT.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css?v=23">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="site-nav" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.png" alt="" width="30" height="30">
+        <span>ATLASSXPORT</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Products</a></li>
+        <li><a href="quality.html">Quality</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div class="wrap">
+      <section class="page-hero reveal">
+        <h1>Let's talk produce.</h1>
+        <p>Tell us what you're looking for. We'd love to hear from you.</p>
+      </section>
+
+      <section class="contact-grid">
+        <dl class="contact-info reveal">
+          <dt>Email</dt>
+          <dd><a href="mailto:atlassxports@gmail.com">atlassxports@gmail.com</a></dd>
+          <dt>Phone</dt>
+          <dd><a href="tel:+447544692201">+44 7544 692201</a></dd>
+          <dt>Location</dt>
+          <dd>UK based &middot; Moroccan sourcing</dd>
+          <dt>Markets</dt>
+          <dd>United Kingdom &amp; France</dd>
+          <dt>Delivery</dt>
+          <dd>Door to door, UK&#8209;wide &middot; any quantity</dd>
+        </dl>
+
+        <form data-contact-form novalidate class="reveal">
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="field">
+              <label for="company">Company</label>
+              <input id="company" name="company" type="text" autocomplete="organization">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="field">
+              <label for="volume">Estimated volume</label>
+              <input id="volume" name="volume" type="text" placeholder="e.g. tonnes per week">
+            </div>
+          </div>
+          <div class="field">
+            <label for="product">Product</label>
+            <select id="product" name="product" data-product-select required>
+              <option value="">Select a product</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button class="submit-btn" type="submit">Send enquiry</button>
+          <p class="form-note" data-form-note role="status" tabindex="-1" hidden>Thank you. We'll be in touch very soon.</p>
+        </form>
+      </section>
+
+      <section class="keep-touch reveal" aria-labelledby="keep-touch-heading">
+        <span class="section-label" id="keep-touch-heading">Keep in touch</span>
+        <h2 class="mega" style="font-size:clamp(1.6rem,4vw,2.6rem)">Take our card with you.</h2>
+        <div class="card-preview" data-card-front></div>
+        <div>
+          <a class="download-btn" href="business-card.html">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 21h16"/></svg>
+            View &amp; download business card
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="foot-brand" href="index.html">
+        <img src="assets/logo.png" alt="" width="22" height="22">
+        <span>ATLASSXPORT</span>
+      </a>
+      <span>Freshness, sourced from Morocco.</span>
+      <div class="foot-links">
+        <a href="index.html">Products</a>
+        <a href="quality.html">Quality</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <span>&copy; <span data-year></span> ATLASSXPORT AND IMPORT LIMITED</span>
+    </div>
+  </footer>
+
+  <script src="js/products.js?v=23"></script>
+  <script src="js/main.js?v=23"></script>
+  <script src="js/business-card.js?v=23"></script>
+</body>
+</html>
