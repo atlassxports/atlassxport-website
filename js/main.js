@@ -98,9 +98,12 @@
     var openFlag = null;
     var phoneMap = window.matchMedia("(max-width: 720px)");
 
-    // Full world on wide screens; zoomed to the Atlantic/Europe on phones so the flags stay readable.
+    // The whole world everywhere; on phones the flags are drawn larger so they stay readable.
     function setMapView() {
-      mapSvg.setAttribute("viewBox", phoneMap.matches ? "355 70 270 218" : "0 0 1000 490");
+      var s = phoneMap.matches ? 2 : 1.28;
+      marketFlags.forEach(function (f) {
+        f.setAttribute("transform", f.getAttribute("transform").replace(/scale\([^)]*\)/, "scale(" + s + ")"));
+      });
       if (openFlag) placeMarketCard(openFlag);
     }
     function placeMarketCard(flag) {
@@ -364,7 +367,7 @@
     var header = document.querySelector(".site-header");
     var menu = document.querySelector(".nav-links");
     var hero = document.querySelector(".home-hero");
-    var heroLayer = hero && hero.querySelector(".hero-rotator");
+    var heroLayer = null; // (a transform here would stop the photos blending into the page)
 
     var bar = document.createElement("div");
     bar.className = "scroll-progress";
@@ -395,7 +398,7 @@
         if (r.bottom > 0 && r.top < window.innerHeight) {
           var limit = r.height * 0.03;
           var shift = Math.max(-limit, Math.min(limit, -r.top * 0.18));
-          heroLayer.style.transform = "translate3d(0," + shift.toFixed(1) + "px,0) scale(1.05)";
+          heroLayer.style.transform = "translate3d(0," + shift.toFixed(1) + "px,0) scale(1)";
         }
       }
     }
